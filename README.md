@@ -20,7 +20,8 @@
 cd ~/videos
 for video in (ls *.mp4)
 do
- ffmpeg -re -i "video" -preset ultrafast -vcodec libx264 -g 60 -b:v 6000k -c:a aac -b:a 128k -strict -2 -f flv ${rtmp}
+ #ffmpeg -re -i "video" -preset ultrafast -vcodec libx264 -g 60 -b:v 6000k -c:a aac -b:a 128k -strict -2 -f flv ${rtmp}
+ ffmpeg -re -i "$video" -c:v copy -c:a aac -b:a 192k -strict -2 -f flv ${rtmp}
 done
 ```
 
