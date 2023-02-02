@@ -23,3 +23,8 @@ do
  ffmpeg -re -i "video" -preset ultrafast -vcodec libx264 -g 60 -b:v 6000k -c:a aac -b:a 128k -strict -2 -f flv ${rtmp}
 done
 ```
+
+
+- 资源下载
+
+https://www.vidjuice.com/
