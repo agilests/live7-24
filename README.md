@@ -13,8 +13,10 @@ $rtmp="rtmp://a.rtmp.youtube.com/live2/xxxxxx"
 
 * 上传.MP4文件到指定目录, 开启循环直播
 
+'''
 cd ~/videos
 for video in $(ls *.mp4)
 do
   ffmpeg -re -i "$video" -preset ultrafast -vcodec libx264 -g 60 -b:v 6000k -c:a aac -b:a 128k -strict -2 -f flv ${rtmp}
 done
+'''
